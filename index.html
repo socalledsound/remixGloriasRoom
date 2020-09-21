@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .canvas {
+            background-image: url('img/00.jpg');
+            width: 110vw;
+            height: 137vh;
+        }
+        .container {
+            /* display: flex;
+            flex-wrap: wrap; */
+        }
+
+        .button {
+            width: 190px;
+            height: 190px;
+            margin: 80px 50px;
+        }
+        
+        .button:hover {
+            background-color:transparent;
+        }
+
+        .item {
+            width: 160px;
+            height: 160px;
+            margin-top: 10px;
+            margin-left: 180px;
+        }
+
+        .item img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .item:hover {
+            animation: rotate 80s infinite;
+        }
+        @keyframes rotate{
+            50%{transform: rotate(360deg)};
+        }
+    </style>
+
+    <script src="libs/howler.js"></script>
+
+    <title>Musician Room</title>
+</head>
+
+<body>
+<div class="canvas">
+    <div class="container">
+
+        <div class="button" onclick="playSound(sound0)">
+            <div class="item">
+            <img src="img/would.jpg" alt=""></div>
+        </div>
+
+        <div class="button" onclick="playSound(sound1)">
+            <div class="item">
+                <img src="img/eight.png" alt=""></div>
+        </div>
+       
+        <div class="button" onclick="playSound(sound2)">
+            <div class="item">
+                <img src="img/fine.png" alt=""></div>
+        </div>
+       
+        <div class="button" onclick="playSound(sound3)">
+            <div class="item">
+                <img src="img/goblin.jpg" alt=""></div>
+        </div>
+       
+        <div class="button" onclick="playSound(sound4)">
+            <div class="item">
+                <img src="img/wiing.jpg" alt=""></div>
+        </div>
+       
+        <div class="button" onclick="playSound(sound5)">
+            <div class="item">
+                <img src="img/ice.jpg" alt=""></div>
+        </div>
+        
+        <div class="button" onclick="playSound(sound6)">
+            <div class="item">
+                <img src="img/love.jpg" alt=""></div>
+        </div>
+       
+        <div class="button" onclick="playSound(sound7)">
+            <div class="item">
+                <img src="img/bluenming.jpg" alt=""></div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+</body>
+
+<script>
+const sound0 = new Howl({ src: 'sounds/0.mp3' });
+const sound1 = new Howl({ src: 'sounds/1.mp3' });
+const sound2 = new Howl({ src: 'sounds/2.mp3' });
+const sound3 = new Howl({ src: 'sounds/3.mp3' });
+const sound4 = new Howl({ src: 'sounds/4.mp3' });
+const sound5 = new Howl({ src: 'sounds/5.mp3' });
+const sound6 = new Howl({ src: 'sounds/6.mp3' });
+const sound7 = new Howl({ src: 'sounds/7.mp3' });
+
+console.log(sound0);
+const playSound = (sound) => {
+    sound.play();
+}
+
+</script>
+</html>
