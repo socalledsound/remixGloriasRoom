@@ -52,9 +52,13 @@
 
 <body>
 <div class="canvas">
+
+    <!-- the firsrt thing I did was make two containers, to keep things a little more orderly, as they flex -->
     <div class="container">
 
         <div class="button" >
+            <!-- I moved the listeners to the item so they don't trigger on the space between the images -->
+            <!-- I changed the listener to mouseenter and added a mouseout to stop the sound -->
             <div class="item" onmouseenter="playSound(sound0)" onmouseout="stopSound(sound0)">
                 <img src="img/would.jpg" alt="">
             </div>
@@ -125,12 +129,14 @@ const sound7 = new Howl({ src: 'sounds/7.mp3' });
 
 console.log(sound0);
 const playSound = (sound) => {
+    //this conditional checks to see if the sound is already playing, and if it is not it plays it
     if(!sound.playing()){
         sound.play();
     }
     
 }
 
+//this function will stop the sound
 const stopSound = (sound) => {
     console.log('triggered');
     sound.stop();
